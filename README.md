@@ -2,5 +2,6 @@
 
 ### 使用 Arduino, Node-RED, Python, Grafana
 
-> 範例程式
-> 教學投影片
+* 範例程式
+
+* 教學投影片
