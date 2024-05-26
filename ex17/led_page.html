@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>LED Color</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<script type="text/javascript" src="js/jquery-3.7.1.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/jscolor.js"></script>	
+	
+</head>
+<body>
+	<div class="container">
+		<div class="p-5 mb-4 bg-body-tertiary rounded-3">
+			<div class="container-fluid py-5">
+				<h1 class="display-5 fw-bold text-center">LED Control</h1>        
+      		</div>
+    	</div>
+	</div>
+
+	<div class="container">			
+		<div class="row">
+			<div class="col-md-12 text-center">
+				<div id="led-1">					
+					<svg height="100" width="100">
+						<circle id="status-led-1" cx="50" cy="50" r="40" 
+						stroke="black" stroke-width="3" fill="#FFFFFF">
+						</circle>
+					</svg>					
+					<p>
+						LED color:
+					</p>
+					<input class="jscolor" id="led" value="FFFFFF">
+					<div id="message-led-1"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script>
+		$(function(){
+			$("#led").change(function(){
+				value=$("#led").val();				
+				$("#message-led-1").text("LED Color is set to "+value);
+				$("#status-led-1").css({fill:value});
+			});
+		});
+	</script>
+</body>
+</html>
