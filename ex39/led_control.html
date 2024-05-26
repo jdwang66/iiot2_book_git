@@ -1,0 +1,97 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>LED Color</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    <script type="text/javascript" src="js/jquery-3.7.1.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/jscolor.js"></script>
+    <script type="text/javascript" src="js/paho-mqtt-min.js"></script>
+    <script type="text/javascript" src="js/led_control.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="p-5 mb-4 bg-body-tertiary rounded-3">
+        <div class="container-fluid py-5">
+          <h1 class="display-5 fw-bold text-center">LED Control</h1>
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 text-center">
+          <div id="led-1">
+            <svg height="100" width="100">
+              <circle
+                id="status-led-1"
+                cx="50"
+                cy="50"
+                r="40"
+                stroke="black"
+                stroke-width="3"
+                fill="#FFFFFF"
+              ></circle>
+            </svg>
+            <p>LED #1 color:</p>
+            <input
+              data-jscolor="{onInput:'update(this)', alpha:1.0}"
+              id="led-1"
+              value="FFFFFF"
+            />
+            <div class="my-3" id="message-led-1"></div>
+            <div id="receive-led-1"></div>
+          </div>
+        </div>
+
+        <div class="col-md-4 text-center">
+          <div id="led-2">
+            <svg height="100" width="100">
+              <circle
+                id="status-led-2"
+                cx="50"
+                cy="50"
+                r="40"
+                stroke="black"
+                stroke-width="3"
+                fill="#FFFFFF"
+              ></circle>
+            </svg>
+            <p>LED #2 color:</p>
+            <input
+              data-jscolor="{onInput:'update2(this)', alpha:1.0}"
+              id="led-2"
+              value="FFFFFF"
+            />
+            <div class="my-3" id="message-led-2"></div>
+            <div id="receive-led-2"></div>
+          </div>
+        </div>
+
+        <div class="col-md-4 text-center">
+          <div id="led-3">
+            <svg height="100" width="100">
+              <circle
+                id="status-led-3"
+                cx="50"
+                cy="50"
+                r="40"
+                stroke="black"
+                stroke-width="3"
+                fill="#FFFFFF"
+              ></circle>
+            </svg>
+            <p>LED #1 color:</p>
+            <input
+              data-jscolor="{onInput:'update3(this)', alpha:1.0}"
+              id="led-3"
+              value="FFFFFF"
+            />
+            <div class="my-3" id="message-led-3"></div>
+            <div id="receive-led-3"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
